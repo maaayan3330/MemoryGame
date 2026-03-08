@@ -1,6 +1,10 @@
-import LOGO from '../assets'
+import LOGO from '../assets/Logo.png';
+
+// function for the logo of the game
 export default function Header() {
     return(
-        <img src={LOGO} alt='logo of Brooklyn nine nine'/>
+        <header className='header'>
+            <img src={LOGO} alt='logo of Brooklyn nine nine'/>
+        </header>
     );
 }
