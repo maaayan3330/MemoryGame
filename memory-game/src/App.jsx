@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header.jsx';
 import Card from './components/Card.jsx';
+import GameBoard from './components/GameBoard.jsx';
 
 // images for the board
 import AMY from './assets/Amy.jpg';
@@ -22,11 +23,7 @@ function App() {
   return (
     <>
     <Header/>
-    <div className='board'> 
-      {boardImages.map((img , index) => (
-      <Card key={index} image={img}/>
-    ))}
-    </div>
+    <GameBoard boardImages={boardImages}/>
 
     </> 
   )

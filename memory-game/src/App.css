@@ -50,7 +50,6 @@ body{
 .card-inner.flipped {
   transform: rotateY(180deg);
 }
-
 .card-front,
 .card-back {
   position: absolute;
@@ -59,7 +58,7 @@ body{
   backface-visibility: hidden;
 }
 
-.card-back {
+.card-front {
   transform: rotateY(180deg);
 }
 
