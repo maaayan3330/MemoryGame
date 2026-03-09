@@ -17,13 +17,16 @@ function App() {
 
   // create a arr of the images for the board
   const images = [AMY,DIAZ,CHARLES,HITCHOCOK,HOLT,JAKE,JINA,TERRY];
+  const boardImages = [...images, ...images];
 
   return (
     <>
     <Header/>
-    {images.map((img , index) => (
+    <div className='board'> 
+      {boardImages.map((img , index) => (
       <Card key={index} image={img}/>
     ))}
+    </div>
 
     </> 
   )

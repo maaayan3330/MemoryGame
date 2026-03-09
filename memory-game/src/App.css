@@ -62,3 +62,11 @@ body{
 .card-back {
   transform: rotateY(180deg);
 }
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 140px);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
