@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Card from "./Card";
+import EndGame from "./EndGame";
 import "../App.css";
 
 export default function GameBoard({ boardImages }) {
@@ -40,6 +41,14 @@ export default function GameBoard({ boardImages }) {
       }
     }
   }
+  // val to keep if the game is over
+  const gameOver = matchCards.length === boardImages.length;
+
+  // function to restart a game
+  function restart() {
+    setMatchCards([]);
+    setOpenCards([]);
+  }
 
   return (
     <>
@@ -53,6 +62,7 @@ export default function GameBoard({ boardImages }) {
           />
         ))}
       </div>
+        {gameOver && <EndGame toRestart={restart}/>}
     </>
   );
 }
