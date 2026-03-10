@@ -33,6 +33,11 @@ Flip the cards, find the matching characters from Brooklyn Nine-Nine, and try to
 
 https://memory-game-two-rosy.vercel.app/
 
+## 📚 Learning Purpose
+
+This project was built as part of my self-learning journey in React.  
+The goal was to practice component architecture, state management, and interactive UI development by implementing a complete memory game from scratch.
+
 ## 📸 Screenshot
 
 <img width="1100" height="902" alt="image" src="https://github.com/user-attachments/assets/f7886f33-e9ed-4561-b6ff-55ce2de4d665" />
