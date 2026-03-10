@@ -3,7 +3,7 @@ import Card from "./Card";
 import EndGame from "./EndGame";
 import "../App.css";
 
-export default function GameBoard({ boardImages }) {
+export default function GameBoard({ boardImages ,toRestartGameShffle}) {
   // state of open cards list - empty list
   const [openCards, setOpenCards] = useState([]);
   // state of matches cards
@@ -48,6 +48,7 @@ export default function GameBoard({ boardImages }) {
   function restart() {
     setMatchCards([]);
     setOpenCards([]);
+    toRestartGameShffle();
   }
 
   return (
@@ -55,7 +56,7 @@ export default function GameBoard({ boardImages }) {
       <div className="board">
         {boardImages.map((img, index) => (
           <Card
-            key={index}
+            key={img + index}
             image={img}
             isFlipped={openCards.includes(index) || matchCards.includes(index)}
             onFlip={() => handleFlip(index)}

@@ -80,12 +80,16 @@ body{
   background: rgba(0, 0, 0, 0.75);
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   z-index: 1000;
-}
 
+  opacity: 0;
+  animation: showWin 0.4s ease forwards;
+  animation-delay: 0.8s;
+}
 .gameOverBoard h1 {
   color: #fde047;
   font-size: 48px;
@@ -94,4 +98,38 @@ body{
   border-radius: 16px;
   border: 3px solid #facc15;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.gameOverBoard button {
+  margin-top: 20px;
+  padding: 12px 30px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  color: #1f2937;
+  background: #fde047;
+
+  border: 3px solid #facc15;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.gameOverBoard button:hover {
+  background: #facc15;
+  transform: scale(1.08);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+}
+.gameOverBoard button:active {
+  transform: scale(0.95);
+}
+
+
+@keyframes showWin {
+  to {
+    opacity: 1;
+  }
 }
