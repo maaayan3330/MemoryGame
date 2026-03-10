@@ -98,6 +98,7 @@ body{
   border-radius: 16px;
   border: 3px solid #facc15;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;   
 }
 
 .gameOverBoard button {
@@ -116,6 +117,10 @@ body{
   cursor: pointer;
 
   transition: all 0.25s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gameOverBoard button:hover {
@@ -127,6 +132,13 @@ body{
   transform: scale(0.95);
 }
 
+.moves {
+  text-align: center;
+  color: #fde047;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 20px 0;
+}
 
 @keyframes showWin {
   to {

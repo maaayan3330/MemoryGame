@@ -1,7 +1,7 @@
-export default function EndGame({toRestart}) {
+export default function EndGame({toRestart ,moves}) {
     return(
         <div className="gameOverBoard">
-            <h1>No doubt, no doubt,<br/> no doubt, you won!</h1>
+            <h1>No doubt, no doubt, no doubt,<br/>you won in {moves} moves!</h1>
             <button onClick={toRestart}>Play Again</button>
         </div>
     );

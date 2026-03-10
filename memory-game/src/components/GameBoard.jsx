@@ -8,6 +8,8 @@ export default function GameBoard({ boardImages ,toRestartGameShffle}) {
   const [openCards, setOpenCards] = useState([]);
   // state of matches cards
   const [matchCards, setMatchCards] = useState([]);
+  // state of counter
+  const [moves, setMoves] = useState(0);
 
   // function to handle filp on click
   function handleFlip(index) {
@@ -29,6 +31,9 @@ export default function GameBoard({ boardImages ,toRestartGameShffle}) {
       const first = newOpenCards[0];
       const second = newOpenCards[1];
 
+      // +1 to the counter becasue it is one move
+      setMoves(prev => prev + 1);
+
       if (boardImages[first] === boardImages[second]) {
         setMatchCards(prev => [...prev, first, second]);
         // now it will by empty
@@ -49,10 +54,12 @@ export default function GameBoard({ boardImages ,toRestartGameShffle}) {
     setMatchCards([]);
     setOpenCards([]);
     toRestartGameShffle();
+    setMoves(0);
   }
 
   return (
     <>
+      <p className="moves">Moves: {moves}</p>
       <div className="board">
         {boardImages.map((img, index) => (
           <Card
@@ -63,7 +70,7 @@ export default function GameBoard({ boardImages ,toRestartGameShffle}) {
           />
         ))}
       </div>
-        {gameOver && <EndGame toRestart={restart}/>}
+        {gameOver && <EndGame toRestart={restart} moves={moves}/>}
     </>
   );
 }
