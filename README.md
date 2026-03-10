@@ -10,11 +10,14 @@ Flip the cards, find the matching characters from Brooklyn Nine-Nine, and try to
 
 ## ✨ Features
 
-* Dynamic game board  *** Card flip animation  * Matching pair detection
-
-* Move counter  * Automatic win detection  * Game restart option
-
-* Shuffled cards on restart  * Victory screen with final score
+* Dynamic game board
+* Card flip animation
+* Matching pair detection
+* Move counter
+* Automatic win detection
+* Game restart option
+* Shuffled cards on restart
+* Victory screen with final score
 
 ## 🛠 Built With
 
